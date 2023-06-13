@@ -1,7 +1,62 @@
 ---
-import Layout from '../layouts/Layout.astro';
+import Layout from '@/layouts/Layout.astro';
+import Stats from '@/components/Stats.astro';
+import { getImage, Image } from 'astro:assets';
+import bg from '@/assets/skyline.webp';
+import logo from '@/assets/logo.png';
+import buildingPhoto from '@/assets/building.webp';
+import Services from '@/components/Services.astro';
+const optimizedBg = await getImage({ src: bg, format: 'webp' });
 ---
 
 <Layout title='BNR Global'>
-  <section class=''>BNR</section>
+  <section
+    id='hero'
+    style={`background-image: url(${optimizedBg.src})`}
+    class='bg-cover min-h-screen w-full grid place-items-center relative after:absolute after:bg-black/40 after:w-full after:h-full'
+  >
+    <Image
+      src={logo}
+      alt='BNR Global logo'
+      class='mx-auto w-20 h-20 invert absolute top-0 left-1/2 -translate-x-1/2 z-10'
+    />
+    <h1 class='text-center text-white text-2xl sm:text-4xl md:text-7xl font-bold relative z-10 max-w-screen-md'>
+      Building&nbsp;Trust<br />With&nbsp;Quality&nbsp;Work
+    </h1>
+  </section>
+  <section id='about' class='max-w-screen-xl mx-auto p-4 grid md:grid-cols-2 my-8'>
+    <div
+      class='self-start md:sticky top-8 space-y-[1em] before:w-20 before:h-1 before:-top-2 before:bg-brand before:absolute p-4'
+    >
+      <h2 class='text-2xl font-bold'>About Us</h2>
+      <p>
+        BNR Global, a collaborative initiative with IFF – The International Finance Forum, is dedicated to sustainable
+        construction: a harmonious combination of residential, business, and commercial facilities that integrate Green
+        Technology directly in the heart of Nansha District, China.
+      </p>
+      <p class='text-slate-500'>
+        With an anticipated height of 108 floors, the building will encompass a total area of 664,324㎥.
+      </p>
+      <a href='mailto:info@gg56.world' class='text-lg inline-block font-medium text-brand hover:underline'
+        >Contact us &rarr;</a
+      >
+    </div>
+    <div>
+      <div
+        class='w-fit h-fit before:h-full relative before:absolute before:-top-2 isolate before:-z-10 before:left-2 before:w-full before:border-4 before:border-brand'
+      >
+        <Image src={buildingPhoto} alt='Global Green Finance Center' />
+      </div>
+    </div>
+  </section>
+  <Stats />
+  <Services />
+  <section id='contact' class='text-center text-white bg-brand py-16 px-4'>
+    <h2 class='uppercase font-bold text-lg md:text-2xl mb-8 max-w-[40ch] mx-auto'>
+      If You Can Envision It, Then We Can Build It! Tell Us More About Your Project
+    </h2>
+    <a href='mailto:info@gg56.world' class='inline-block bg-white text-brand font-medium py-4 px-8 hover:bg-gray-200'
+      >Contact Us</a
+    >
+  </section>
 </Layout>

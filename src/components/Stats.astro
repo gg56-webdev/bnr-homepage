@@ -1,0 +1,21 @@
+---
+const stats = [
+  [250, 'Projects Completed'],
+  [250, 'Projects Completed'],
+  [250, 'Projects Completed'],
+  [250, 'Projects Completed'],
+];
+---
+
+<section id='stats' class='my-16 bg-brand text-white'>
+  <div class='max-w-screen-2xl mx-auto px-8 py-16 flex justify-center flex-wrap gap-8'>
+    {
+      stats.map(([num, stat]) => (
+        <dl class='grid items-center grow shrink-0 text-center'>
+          <dd class='font-bold text-3xl lg:text-6xl lg:mb-4'>{num}</dd>
+          <dt class='font-medium lg:text-2xl text-orange-100'>{stat}</dt>
+        </dl>
+      ))
+    }
+  </div>
+</section>
