@@ -1,9 +1,9 @@
 ---
 const stats = [
-  [250, 'Projects Completed'],
-  [250, 'Projects Completed'],
-  [250, 'Projects Completed'],
-  [250, 'Projects Completed'],
+  ['1980%', 'FAR'],
+  [118, 'Floors'],
+  [3367, 'Parking Spots'],
+  ['23,316m<sup>2</sup>', 'Site Area'],
 ];
 ---
 
@@ -11,9 +11,9 @@ const stats = [
   <div class='max-w-screen-2xl mx-auto px-8 py-16 flex justify-center flex-wrap gap-8'>
     {
       stats.map(([num, stat]) => (
-        <dl class='grid items-center grow shrink-0 text-center'>
-          <dd class='font-bold text-3xl lg:text-6xl lg:mb-4'>{num}</dd>
-          <dt class='font-medium lg:text-2xl text-orange-100'>{stat}</dt>
+        <dl class=' items-center grow shrink-0 text-center flex flex-col-reverse'>
+          <dt class='font-medium lg:text-2xl text-gray-200'>{stat}</dt>
+          <dd class='font-bold text-3xl lg:text-6xl lg:mb-4' set:html={num} />
         </dl>
       ))
     }
