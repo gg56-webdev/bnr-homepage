@@ -1,42 +1,23 @@
 ---
 const services = [
+  ['Collaboration with IFF', 'Collaboration directly with the IFF - The International Finance Forum.'],
+  ['Area Mix', 'Combination of residential, business, and commercial facilities.'],
+  ['Nansha District', 'Located in the new special economic and political administration zone Nansha District, China.'],
   [
-    'Pre-Construction Services',
-    'We take our time on initial planning before any construction begins, to balance all the financial and efficiency issues beforehand...',
-  ],
-  [
-    'General Contracting',
-    'We have a long list of professional contractors, whom our engineers and architects enjoy to work with on a majority of our projects!',
-  ],
-  [
-    'Construction Services',
-    'Our customers love the pace/quality tempo that we show during each of the principal construction processes!',
-  ],
-  [
-    'Construction Management',
-    "Construction project management is essential. We're using the most time and iterations efficient life cycles methods for that.",
-  ],
-  [
-    'Building Information MODELING (BIM)',
-    'Oftentimes physical and functional essence of any construction project needs to be represented digitally, in a 3D model format.',
-  ],
-  [
-    'Design-Build',
-    'If a project is not too complex, we may hire a designer-builder type of contractor, to make the longevity of the construction shorter.',
+    'Green Technology',
+    'Incorporate innovative green technologies to minimize environmental impact and promote sustainable practices.',
   ],
 ];
 ---
 
-<section id='services' class='p-4 max-w-screen-xl mx-auto my-16'>
-  <h2 class='text-center text-4xl mb-16 font-bold'>Our Services</h2>
-  <ul class='grid sm:grid-cols-2 md:grid-cols-3 gap-8'>
+<section id='services' class='p-8 max-w-screen-xl mx-auto my-16'>
+  <h2 class='text-center text-4xl mb-16 font-bold'>Our Project</h2>
+  <ul class='grid sm:grid-cols-2 gap-8 list-disc marker:text-brand'>
     {
       services.map(([h3, p]) => (
-        <li class='flex items-start before:hidden md:before:block before:w-16 gap-2 before:aspect-square before:rounded-full before:bg-brand before:mt-0.5'>
-          <div>
-            <h3 class='font-bold text-lg mb-2'>{h3}</h3>
-            <p class='text-slate-500'>{p}</p>
-          </div>
+        <li>
+          <h3 class='font-bold text-xl mb-2'>{h3}</h3>
+          <p class='text-slate-500 text-lg [text-wrap:balance;]'>{p}</p>
         </li>
       ))
     }
