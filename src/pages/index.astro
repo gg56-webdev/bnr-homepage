@@ -2,41 +2,49 @@
 import Layout from '@/layouts/Layout.astro';
 import Stats from '@/components/Stats.astro';
 import { getImage, Image } from 'astro:assets';
-import bg from '@/assets/skyline.webp';
+import bg from '@/assets/skyline2.webp';
 import logo from '@/assets/logo.png';
 import buildingPhoto from '@/assets/building.webp';
 import Services from '@/components/Services.astro';
-const optimizedBg = await getImage({ src: bg, format: 'webp' });
+const optimizedBg = await getImage({ src: bg, format: 'avif', quality: 'mid' });
 ---
 
 <Layout title='BNR Global'>
   <section
     id='hero'
     style={`background-image: url(${optimizedBg.src})`}
-    class='bg-cover min-h-screen w-full grid place-items-center relative after:absolute after:bg-black/40 after:w-full after:h-full'
+    class='bg-cover p-4 bg-[42%] min-h-screen w-full grid place-items-center relative after:absolute after:bg-black/40 after:w-full after:h-full'
   >
     <Image
       src={logo}
       alt='BNR Global logo'
       class='mx-auto w-20 h-20 invert absolute top-0 left-1/2 -translate-x-1/2 z-10'
     />
-    <h1 class='text-center text-white text-2xl sm:text-4xl md:text-7xl font-bold relative z-10 max-w-screen-md'>
-      Building&nbsp;Trust<br />With&nbsp;Quality&nbsp;Work
+    <h1
+      class='text-center text-white text-2xl sm:text-4xl md:text-7xl/[1.2] font-bold relative z-10 max-w-screen-md [text-wrap:balance;]'
+    >
+      Building Trust With Quality Work
     </h1>
   </section>
-  <section id='about' class='max-w-screen-xl mx-auto p-4 grid md:grid-cols-2 my-8'>
+  <section id='about' class='max-w-screen-xl mx-auto p-4 grid md:grid-cols-2 gap-4 my-8'>
     <div
       class='self-start md:sticky top-8 space-y-[1em] before:w-20 before:h-1 before:-top-2 before:bg-brand before:absolute p-4'
     >
       <h2 class='text-2xl font-bold'>About Us</h2>
       <p>
-        BNR Global, a collaborative initiative with IFF – The International Finance Forum, is dedicated to sustainable
-        construction: a harmonious combination of residential, business, and commercial facilities that integrate Green
-        Technology directly in the heart of Nansha District, China.
+        BNR Global is a Korean-based company that is committed to building a better world through the application of the
+        latest green technologies. With a strong focus on environmental consciousness and social responsibility. The
+        company collaborates with the IFF – The International Finance Forum in China to build the Global Green Finance
+        Center in Guangzhou Province, China: a harmonious combination of residential, business, and commercial
+        facilities.
       </p>
-      <p class='text-slate-500'>
-        With an anticipated height of 108 floors, the building will encompass a total area of 664,324㎥.
+      <p>
+        BNR Global aims to create a harmonious living and business community in the Nansha District, China, by
+        integrating green technology into residential, business, and commercial facilities. By leveraging innovation,
+        strategic partnerships, and a commitment to excellence, BNR Global is dedicated to setting new standards for
+        sustainable urban development and inspiring a global transition towards a greener future.
       </p>
+
       <a href='mailto:info@gg56.world' class='text-lg inline-block font-medium text-brand hover:underline'
         >Contact us &rarr;</a
       >
@@ -52,8 +60,9 @@ const optimizedBg = await getImage({ src: bg, format: 'webp' });
   <Stats />
   <Services />
   <section id='contact' class='text-center text-white bg-brand py-16 px-4'>
-    <h2 class='uppercase font-bold text-lg md:text-2xl mb-8 max-w-[45ch] mx-auto'>
-      If You Can Envision It, Then We Can Build It! Tell Us More About Your Project
+    <h2 class='uppercase font-bold text-lg md:text-2xl mb-8 max-w-[45ch] mx-auto [text-wrap:balance;]'>
+      Contact Us for More Information about BNR Global.
+      <small class='block'>Let's Talk</small>
     </h2>
     <a href='mailto:info@gg56.world' class='inline-block bg-white text-brand font-medium py-4 px-8 hover:bg-gray-200'
       >Contact Us</a
