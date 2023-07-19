@@ -1,0 +1,45 @@
+---
+import buildingPhoto from "@/assets/building.webp";
+import { Image } from "astro:assets";
+---
+
+<section
+  id="about"
+  class="max-w-screen-xl mx-auto p-4 grid md:grid-cols-2 gap-4 my-8"
+>
+  <div
+    class="self-start md:sticky top-8 space-y-[1em] before:w-20 before:h-1 before:-top-2 before:bg-brand before:absolute p-4"
+  >
+    <h2 class="text-2xl font-bold">About Us</h2>
+    <p>
+      BNR Global is a Korean-based company that is committed to building a
+      better world through the application of the latest green technologies.
+      With a strong focus on environmental consciousness and social
+      responsibility. The company collaborates with the IFF – The International
+      Finance Forum in China to build the Global Green Finance Center in
+      Guangzhou Province, China: a harmonious combination of residential,
+      business, and commercial facilities.
+    </p>
+    <p>
+      BNR Global aims to create a harmonious living and business community in
+      the Nansha District, China, by integrating green technology into
+      residential, business, and commercial facilities. By leveraging
+      innovation, strategic partnerships, and a commitment to excellence, BNR
+      Global is dedicated to setting new standards for sustainable urban
+      development and inspiring a global transition towards a greener future.
+    </p>
+
+    <a
+      href="mailto:ytkytk@hanmail.net"
+      class="text-lg inline-block font-medium text-brand hover:underline"
+      >Contact us &rarr;</a
+    >
+  </div>
+  <div>
+    <div
+      class="w-fit h-fit before:h-full relative before:absolute before:-top-2 isolate before:-z-10 before:left-2 before:w-full before:border-4 before:border-brand"
+    >
+      <Image src={buildingPhoto} alt="Global Green Finance Center" />
+    </div>
+  </div>
+</section>
