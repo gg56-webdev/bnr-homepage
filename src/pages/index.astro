@@ -1,10 +1,10 @@
 ---
 import Layout from "@/layouts/Layout.astro";
-import Services from "@/components/Services.astro";
 import Hero from "@/components/Hero.astro";
 import About from "@/components/About.astro";
 import Intro from "@/components/Intro.astro";
 import Featured from "@/components/Featured.astro";
+import Contact from "@/components/Contact.astro";
 ---
 
 <Layout title="BNR Global">
@@ -12,18 +12,5 @@ import Featured from "@/components/Featured.astro";
   <About />
   <Intro />
   <Featured />
-  <Services />
-  <section id="contact" class="text-center text-white bg-brand py-16 px-4">
-    <h2
-      class="uppercase font-bold text-lg md:text-2xl mb-8 max-w-[45ch] mx-auto [text-wrap:balance;]"
-    >
-      Contact Us for More Information about BNR Global.
-      <small class="block">Let's Talk</small>
-    </h2>
-    <a
-      href="mailto:ytkytk@hanmail.net"
-      class="inline-block bg-white text-brand font-medium py-4 px-8 hover:bg-gray-200"
-      >Contact Us</a
-    >
-  </section>
+  <Contact />
 </Layout>
