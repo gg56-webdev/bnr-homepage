@@ -1,0 +1,38 @@
+---
+import { Image } from "astro:assets";
+import buildingPhoto2 from '@/assets/building-2.png'
+---
+
+<section id="featured" class="mx-auto max-w-screen-lg py-16 px-4">
+  <div class="grid grid-cols-2 lg:grid-cols-3 gap-4">
+    <!-- 1 -->
+    <h2 class="text-4xl col-span-2 lg:col-span-1 font-bold">Featured Project</h2>
+    <!-- 2 -->
+    <h3 class="text-brand font-bold text-2xl col-span-2 lg:col-span-1">Dynamic Decade: Nansha&nbsp;District</h3>
+    <!-- 3 -->
+    <div class="border-b-4 border-brand text-right grid place-items-end text-lg font-bold pb-2 col-span-2 lg:col-span-1"><a href="http://www.gzns.gov.cn/" class="hover:underline" target="_blank" rel="noopener noreferrer">Discover Nansha →</a></div>
+    <!-- 4 -->
+    <div class="p-4 bg-brand/90 text-white self-center lg:translate-x-10 col-span-2 lg:col-span-1">
+      Nansha New Area is part of the China (Guangdong) Pilot Free Trade Zone Nansha Area in Guangzhou. It is the sixth state-level zone in the country, with great geographical advantages and abundant natural resources.
+    </div>
+    <!-- 5 -->
+    <div class="overflow-hidden col-span-2">
+      <Image src={buildingPhoto2} class="object-cover" alt="Side of skyscraper with a swimming pool"/>
+    </div>
+    <!-- 6 -->
+       <div class="border-t-4 lg:col-start-2 border-brand pt-4">
+      <dl>
+        <dt class="text-xl font-bold">Total Area</dt>
+        <dd class="font-bold text-[clamp(2rem,4vw,2rem)] text-brand">803km<sup>2</sup> (310mi<sup>2</sup>)</dd>
+      </dl>
+    </div>
+    <!-- 7 -->
+    <div class="border-t-4  border-brand pt-4">
+      <dl>
+        <dt class="text-xl font-bold">Density</dt>
+        <dd class="font-bold text-[clamp(2rem,4vw,2rem)] text-brand">1,100/km<sup>2</sup> (2,700/mi<sup>2</sup>)</dd>
+      </dl>
+    </div>
+  </div>
+
+</section>
