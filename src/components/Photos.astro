@@ -1,0 +1,13 @@
+---
+import type { ImageMetadata } from "astro";
+import { Image } from "astro:assets";
+const photos: ImageMetadata[] = await Astro.glob('../assets/photos/*.png').then(files => files.map(f => f.default))
+
+---
+
+<section class="mx-auto max-w-screen-lg py-12 px-4">
+  <h2 class="font-bold text-3xl text-center mb-8">Moments Captured</h2>
+  <ul class="grid grid-cols-2 md:grid-cols-3 gap-8 items-center">
+    {photos.map((photo) => <Image src={photo} alt="Photo of BNR/IFF representatives" class="shadow-md"/>)}
+  </ul>
+</section>
